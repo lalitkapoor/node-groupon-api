@@ -1,0 +1,15 @@
+{
+  "author": "Lalit Kapoor <lalitkapoor@gmail.com> (http://www.lalitkapoor.com)",
+  "name": "node-groupon-api",
+  "description": "Node client for the Groupon API",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lalitkapoor/node-groupon-api.git"
+  },
+  "engines": {
+    "node": ">=0.4.8"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
