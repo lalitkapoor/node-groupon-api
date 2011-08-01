@@ -17,13 +17,13 @@
     "node": ">=0.4.8"
   },
   "dependencies": {
-    "restler": "https://github.com/lalitkapoor/restler/tarball/3e9bd13bffccfe9206bde2fc8965c60cb4f5632d",
+    "restler": "https://github.com/lalitkapoor/restler/tarball/c6cd5076969c81e23e0a587c181b163bdb8cac42",
     "querystring": "0.0.1",
     "poolr": "0.0.4",
     "colors": "0.5.0"
   },
   "devDependencies": {
-    "restler": "https://github.com/lalitkapoor/restler/tarball/3e9bd13bffccfe9206bde2fc8965c60cb4f5632d",
+    "restler": "https://github.com/lalitkapoor/restler/tarball/c6cd5076969c81e23e0a587c181b163bdb8cac42",
     "querystring": "0.0.1",
     "poolr": "0.0.4",
     "colors": "0.5.0"
