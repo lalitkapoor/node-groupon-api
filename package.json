@@ -3,13 +3,23 @@
   "name": "node-groupon-api",
   "description": "Node client for the Groupon API",
   "version": "0.0.1",
+  "homepage": "http://www.lalitkapoor.com",
   "repository": {
     "type": "git",
-    "url": "git://github.com/lalitkapoor/node-groupon-api.git"
+    "url": "https://github.com/lalitkapoor/node-groupon-api.git"
+  },
+  "main": "lib/groupon",
+  "directories": {
+    "lib": "lib"
   },
   "engines": {
     "node": ">=0.4.8"
   },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "restler": "https://github.com/lalitkapoor/restler/tarball/3e9bd13bffccfe9206bde2fc8965c60cb4f5632d",
+    "querystring": "0.0.1",
+    "poolr": "0.0.4",
+    "colors": "0.5.0"
+  }
 }
