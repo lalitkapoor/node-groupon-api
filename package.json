@@ -3,7 +3,8 @@
   "name": "node-groupon-api",
   "description": "Node client for the Groupon API",
   "version": "0.0.1",
-  "homepage": "http://www.lalitkapoor.com",
+  "tags": ["api", "groupon", "pooling", "deals", "client"]
+  "homepage": "https://github.com/lalitkapoor/node-groupon-api",
   "repository": {
     "type": "git",
     "url": "https://github.com/lalitkapoor/node-groupon-api.git"
