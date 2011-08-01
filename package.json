@@ -1,9 +1,9 @@
 {
   "author": "Lalit Kapoor <lalitkapoor@gmail.com> (http://www.lalitkapoor.com)",
-  "name": "node-groupon-api",
+  "name": "groupon",
   "description": "Node client for the Groupon API",
   "version": "0.0.1",
-  "tags": ["api", "groupon", "pooling", "deals", "client"]
+  "tags": ["api", "groupon", "pooling", "deals", "client"],
   "homepage": "https://github.com/lalitkapoor/node-groupon-api",
   "repository": {
     "type": "git",
@@ -16,7 +16,12 @@
   "engines": {
     "node": ">=0.4.8"
   },
-  "dependencies": {},
+  "dependencies": {
+    "restler": "https://github.com/lalitkapoor/restler/tarball/3e9bd13bffccfe9206bde2fc8965c60cb4f5632d",
+    "querystring": "0.0.1",
+    "poolr": "0.0.4",
+    "colors": "0.5.0"
+  },
   "devDependencies": {
     "restler": "https://github.com/lalitkapoor/restler/tarball/3e9bd13bffccfe9206bde2fc8965c60cb4f5632d",
     "querystring": "0.0.1",
