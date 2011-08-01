@@ -14,7 +14,7 @@ class Client
     @base = 'http://api.groupon.com/v2/'
     
   _call: (path, query, callback)->
-    url = [@base, path, '.', @format, '?client_id=', @key, '&', query].join('')
+    url = @base + path + '.' + @format + '?client_id=' + @key + '&' + query
     rest.get(url).on 'complete', (error, data)->
       callback error, data
     return
