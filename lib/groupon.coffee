@@ -1,6 +1,8 @@
 http = require 'http'
-rest = require 'restler'
 qs = require 'querystring'
+wwwdude = require 'wwwdude'
+
+rest = wwwdude.createClient({contentParser: wwwdude.parsers.json, gzip: true})
 
 format = 'json'
 
@@ -15,8 +17,11 @@ class Client
     
   _call: (path, query, callback)->
     url = @base + path + '.' + @format + '?client_id=' + @key + '&' + query
-    rest.get(url).on 'complete', (error, data)->
-      callback error, data
+    rest.get(url).on('success', (data, response)->
+      callback null, data
+    ).on('error', (err)->
+      callback err
+    )
     return
       
       
