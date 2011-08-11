@@ -2,7 +2,7 @@
   "author": "Lalit Kapoor <lalitkapoor@gmail.com> (http://www.lalitkapoor.com)",
   "name": "groupon",
   "description": "Node client for the Groupon API",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "tags": ["api", "groupon", "pooling", "deals", "client"],
   "homepage": "https://github.com/lalitkapoor/node-groupon-api",
   "repository": {
