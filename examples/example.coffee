@@ -20,19 +20,21 @@ getDeals = (division, attempt, callback)->
     
     #retry upto 3 times
     if error?
-      console.error 'error parsing json data in deals for division: '.red + division + ' attempt: ' + (attempt+1)
+      console.error error
+      console.error error.stack
       if attempt>=2 #if we tried 3 times, then there is something wrong, notify user
         failed.push division
-        console.error 'FAILED parsing json data in deals for division: '.red + division + ' attempt: ' + (attempt+1)
+        console.error 'FAILED'.red + division + ' attempt: ' + (attempt+1)
         return callback(error, null)
       else
         return getDeals division, attempt+1, callback #retry, up to 3 attempts
-
+        
     return callback(null, data)
 
 groupon.getDivisions {}, (error, data)->
   if error?
-    console.log 'error parsing json data in divisions'.red
+    console.error error
+    console.error error.stack
     return
   for division in data.divisions
     pool.addTask getDeals, division.id, 0, (error, data)->
