@@ -1,5 +1,29 @@
 qs = require 'querystring'
 wwwdude = require 'wwwdude'
+compress = require 'compress'
+
+console.log wwwdude.createClient._decodeGzip
+
+#patching wwwdude's decode function
+`
+wwwdude.createClient._decodeGzip = function(response) {
+   var body = '';
+   var gunzip = new compress.Gunzip;
+   gunzip.init();
+   
+   response.on('data', function (chunk) {
+     body += gunzip.inflate(chunk.toString('binary'), 'binary');
+   });
+   
+   response.on('end', function () {
+     body += gunzip.end();
+     response.rawData = body;
+     _handleResponse(response);         
+   });
+ }
+`
+console.log wwwdude.createClient.toString()
+
 
 rest = wwwdude.createClient({contentParser: wwwdude.parsers.json, gzip: true, headers: {'Connection':'keep-alive'}})
 
