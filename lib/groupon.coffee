@@ -2,9 +2,7 @@ qs = require 'querystring'
 wwwdude = require 'wwwdude'
 compress = require 'compress'
 
-console.log wwwdude.createClient._decodeGzip
-
-#patching wwwdude's decode function
+#patching wwwdude's decode functionh
 `
 wwwdude.createClient._decodeGzip = function(response) {
    var body = '';
@@ -22,8 +20,6 @@ wwwdude.createClient._decodeGzip = function(response) {
    });
  }
 `
-console.log wwwdude.createClient.toString()
-
 
 rest = wwwdude.createClient({contentParser: wwwdude.parsers.json, gzip: true, headers: {'Connection':'keep-alive'}})
 
