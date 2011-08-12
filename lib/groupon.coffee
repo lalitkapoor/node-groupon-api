@@ -1,8 +1,7 @@
-http = require 'http'
 qs = require 'querystring'
 wwwdude = require 'wwwdude'
 
-rest = wwwdude.createClient({contentParser: wwwdude.parsers.json, gzip: true})
+rest = wwwdude.createClient({contentParser: wwwdude.parsers.json, gzip: true, headers: {'Connection':'keep-alive'}})
 
 format = 'json'
 

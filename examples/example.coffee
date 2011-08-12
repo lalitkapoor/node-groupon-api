@@ -28,13 +28,11 @@ getDeals = (division, attempt, callback)->
         return callback(error, null)
       else
         return getDeals division, attempt+1, callback #retry, up to 3 attempts
-        
     return callback(null, data)
 
 groupon.getDivisions {}, (error, data)->
   if error?
-    console.error error
-    console.error error.stack
+    console.log 'error parsing json data in divisions'.red
     return
   for division in data.divisions
     pool.addTask getDeals, division.id, 0, (error, data)->
