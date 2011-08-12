@@ -2,7 +2,7 @@ qs = require 'querystring'
 wwwdude = require 'wwwdude'
 compress = require 'compress'
 
-#patching wwwdude's decode functionh
+#patching wwwdude's decode function
 `
 wwwdude.createClient._decodeGzip = function(response) {
    var body = '';
